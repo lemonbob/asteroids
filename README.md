@@ -8,9 +8,13 @@ An example game I built (with minified code) can be found at the link above
 
 Code will not been uploaded yet, it will be released at the end of the course.
 
+Course teaching points:
+
 **Build the classic 1979 game - ASTEROIDS - in fewer than 500 lines of Javascript**
 
-**Introduction to vector mathematics and SVG**
+**Introduction to vector mathematics**
+
+**SVG and templating**
 
 **OOP priciples and classes**
 
