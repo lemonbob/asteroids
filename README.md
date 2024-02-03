@@ -15,3 +15,5 @@ Code will not been uploaded yet, it will be released at the end of the course.
 **OOP priciples and classes**
 
 **The black-art of collision detection**
+
+**elastic collision physics**
