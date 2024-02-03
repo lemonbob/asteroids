@@ -16,6 +16,8 @@ Course teaching points:
 
 **SVG and templating**
 
+**Canvas API and requestAnimationFrame**
+
 **OOP priciples and classes**
 
 **The black-art of collision detection**
