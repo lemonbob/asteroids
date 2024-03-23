@@ -45,8 +45,7 @@ class IAPP extends IMPRESS {
 			sfx: new Map(),
 			beatState: true,
 			beatSpeed: 1000,
-			beatTimeStamp: 0,
-			testArray: [1,2,3]
+			beatTimeStamp: 0			
 		};
 		//this.iDefine('isDebug', true);
 	}
