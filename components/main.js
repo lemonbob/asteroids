@@ -125,14 +125,7 @@ class IAPP extends IMPRESS {
 		this.iSetState('this.data.isGameEnded', false);
 		this.iSetState('this.data.score', 0);
 		this.iSetState('this.data.ship');
-		this.createNewAsteroids();
-		/*if (this.audioCtx == undefined) {
-			this.audioCtx = new AudioContext();
-			this.data.sfx.forEach((value) => {
-				const source = this.audioCtx.createMediaElementSource(value);
-				source.connect(this.audioCtx.destination);
-			});
-		}*/
+		this.createNewAsteroids();		
 	}
 
 	createNewAsteroids(count = this.data.startingAsteroidCount) {
