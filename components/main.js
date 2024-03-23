@@ -8,7 +8,7 @@ import { $collisionDetection, $getDistance } from '../modules/gameInterface.js';
 
 let template = /*html*/ `
 <link href="css/app.css" rel="stylesheet" type="text/css">
-<asteroids-header class="asteroids-header" i-event='{"click":"this.test"}' i-props='{"score":"this.data.score", "hiScore":"this.data.hiScore", "lives":"this.data.ship.lives", "level":"this.data.ship.level"}'></asteroids-header>
+<asteroids-header class="asteroids-header" i-event='{"click":"this.test"}' i-props='{"score":"this.data.score", "hiScore":"this.data.hiScore", "level":"this.data.ship.level"}'></asteroids-header>
 <i-if i-prop:condition='{this.data.isGameEnded}'>
 	<asteroids-title></asteroids-title>
 </i-if>
@@ -27,6 +27,7 @@ class IAPP extends IMPRESS {
 			asteroids: new Map(),
 			missiles: new Map(),
 			explosions: new Map(),
+			ship: {level: 0},
 			previousTimeStamp: undefined,
 			aspectRatio: 1920 / 1080,
 			viewBox: '0 0 1920 1080',
@@ -40,8 +41,7 @@ class IAPP extends IMPRESS {
 			titleClass: '',
 			score: 0,
 			hiScore: '00',
-			aspectRatio: 1,
-			ship: { lives: 3, level: 1 },
+			aspectRatio: 1,			
 			sfx: new Map(),
 			beatState: true,
 			beatSpeed: 1000,
@@ -137,7 +137,7 @@ class IAPP extends IMPRESS {
 		while (this.data.asteroids.size < count) {
 			let asteroid = new ASTEROID(this.svgNode, 4, undefined, true);
 			this.data.asteroids.set(asteroid.guid, asteroid);
-			if (this.data.ship.template != undefined) {
+			if (this.data.ship?.template != undefined) {
 				if ($getDistance(this.data.ship, asteroid) < 300) {
 					asteroid.destroy();
 					this.data.asteroids.delete(asteroid.guid);
