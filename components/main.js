@@ -191,7 +191,7 @@ class IAPP extends IMPRESS {
 				if (this.data.thrustFlag === true) this.data.ship.thrust();
 				if (this.data.missileFlag === true) {
 					this.data.missileFlag = false;
-					//add a new missile if the shield if not on
+					//add a new missile if the shield is not on
 					if (this.data.ship.isShieldOn !== true) {
 						this.data.sfx.get('fire').currentTime = 0;
 						this.data.sfx.get('fire').play();
